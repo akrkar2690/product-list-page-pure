@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <span class="brand-name">VENIA</span>
+            <nav>
+                <ul>
+                    <li><a href="#" id="homeLink">Home</a></li>
+                    <li><a href="#" id="aboutLink">Women</a></li>
+                    <li><a href="#" id="contactLink">Men</a></li>
+                    <li><a href="#" id="contactLink">Smart Gear</a></li>
+                    <li><a href="#" id="contactLink">Accessories</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input id="search-box" type="text" class="search-input" placeholder="Search by item name">
+            </div>
+            <div id="shimmers-div" class="shimmers-div">
+                <div class="left-shimmer shimmers-left"></div>
+                <div class="item-1-shimmer shimmers"></div>
+                <div class="item-2-shimmer shimmers"></div>
+                <div class="item-3-shimmer shimmers"></div>
+                <div class="right-shimmer shimmers-left"></div>
+            </div>
+            <div class="items" id="items-div">
+                <div id="filter-results" class="filter-results"><img class="filter-img" src="img/sliders.png"  /> <u>Filter Results</u></div>
+                <div id="sort-products" class="sort-products"><img class="sort-img" src="img/arrow-up.png"  /><img class="sort-img" src="img/arrow-down.png"  /> <u>Sort Products</u></div>
+                <div class="item-1">
+                    <div class="item-1-x"></div>
+                    <div id="filters" class="item-1-x">
+                        <h4>Filters</h4>
+                        <div class="seprator"></div>
+                        <div id="category"  class="category">Categories</div>
+                    </div>
+                </div>
+                <div class="item-2"></div>
+                <div class="item-3">
+                    <div class="sorter">
+                        <select id="priceSort" name="priceSort">
+                            <option value="" disabled selected>Sort by price</option>
+                            <option value="1">Low to High</option>
+                            <option value="2">High to Low</option>
+                        </select>                        
+                    </div>
+                </div>
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePopupBtn">&times;</span>
+                    <div class="pop-up-header"><label class="pop-up-header-text">Filters</label></div>
+                    <div id="category-pop"  class="category-pop"><div class="cat-text">Categories</div></div>
+                    <div class="sorter-pop">
+                        <select id="priceSort-pop" name="priceSort">
+                            <option value="" disabled selected>Sort by price</option>
+                            <option value="1">Low to High</option>
+                            <option value="2">High to Low</option>
+                        </select>                        
+                    </div>
+                    <div><button id="applyButton">Show Result</button></div>
+                </div>
+            </div>
+            <button id="loadButton">Load More Items</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
