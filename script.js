@@ -74,6 +74,7 @@ const displayCategories = (ele) => {
     checkbox.type = "checkbox";
     checkbox.name = "category";
     checkbox.value = category;
+    checkbox.checked = selectedCategories?.includes(category) ? true : false;
 
     checkbox.addEventListener("click", function () {
       if (checkbox.checked) {
@@ -142,10 +143,26 @@ const resize = () => {
     if(window.innerWidth <=640) {
         document.getElementById('filter-results').style.display='block';
         document.getElementById('sort-products').style.display='block';
+
+        if(selectedCategories?.length) {
+            document.getElementById('category-pop').innerHTML ="";
+            displayCategories(document.getElementById('category-pop'));
+        }
+        if (sortValue) {
+            document.getElementById('priceSort-pop').value = sortValue;
+        }
     }else {
         document.getElementById('filter-results').style.display='none';
         document.getElementById('sort-products').style.display='none';
         document.getElementById('popup').style.display = 'none';
+        if(selectedCategories?.length) {
+            document.getElementById('category').innerHTML ="";
+            displayCategories();
+        }
+
+        if (sortValue) {
+            document.getElementById('priceSort').value = sortValue;
+        }
 
         if(window.innerWidth <= 1024) {
             document.getElementsByClassName('item-1-x')[0].style.display = 'none';
